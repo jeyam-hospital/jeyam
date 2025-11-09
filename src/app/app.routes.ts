@@ -9,7 +9,7 @@ import { AppointmentComponent } from './components/appointment/appointment.compo
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'hospital/home', component: HomeComponent },
+  { path: 'jeyam/home', component: HomeComponent },
 
   { path: 'departments', component: DepartmentsComponent },
    { path: 'about', component: AboutComponent },
