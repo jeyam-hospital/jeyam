@@ -1,0 +1,25 @@
+// .footer {
+//     position: relative;
+//   bottom: 0;
+// //   left: 0;
+//   width: calc(100% - 48px);
+//   text-align: center;
+//   padding: 1rem;
+// //   margin-top: 3rem;
+// }
+
+.footer {
+  position: relative;
+  width: calc(100% - 34px);
+  text-align: center;
+  padding: 1rem;
+  background: #880e0e;
+  color: white;
+  text-align: center;
+  font-size: 0.95rem;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  font-size: 0.9rem;
+}

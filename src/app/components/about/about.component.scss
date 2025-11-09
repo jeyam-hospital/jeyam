@@ -1,0 +1,260 @@
+.about-page {
+  min-height: 100vh;
+  background: #fff;
+}
+
+// Hero Section
+.hero-section {
+  background: linear-gradient(135deg, #880e0e 0%, #6a0c0c 100%);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .hero-divider {
+    width: 100px;
+    height: 4px;
+    background: #ff6b6b;
+    margin: 1.5rem auto;
+    border-radius: 2px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    font-weight: 300;
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// Container
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+// About Content
+.about-content {
+  padding: 5rem 0;
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+
+    @media (max-width: 968px) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+}
+
+// About Text
+.about-text {
+  .intro-text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #880e0e;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    border-left: 4px solid #880e0e;
+    padding-left: 1.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+
+  .closing-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #880e0e;
+    font-style: italic;
+    border-right: 4px solid #880e0e;
+    padding-right: 1.5rem;
+    text-align: right;
+  }
+
+  .hospital-tagline {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #880e0e;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #880e0e10 0%, #6a0c0c10 100%);
+    border-radius: 15px;
+    border: 2px solid #880e0e20;
+  }
+}
+
+// Mission & Vision Cards
+.mission-vision-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: sticky;
+  top: 2rem;
+
+  @media (max-width: 968px) {
+    position: static;
+  }
+
+  .card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(136, 14, 14, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #b3babf;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(136, 14, 14, 0.15);
+    }
+
+    &.mission-card {
+      border-top: 5px solid #880e0e;
+    }
+
+    &.vision-card {
+      border-top: 5px solid #b71c1c;
+    }
+  }
+
+  .card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #880e0e;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+    text-align: center;
+    font-style: italic;
+  }
+}
+
+// Animations
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.animate-fade-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeLeft 0.8s ease 0.3s forwards;
+}
+
+.animate-fade-right {
+  opacity: 0;
+  transform: translateX(50px);
+  animation: fadeRight 0.8s ease 0.3s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Mobile Responsive
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .about-content {
+    padding: 3rem 0;
+  }
+
+  .about-text {
+    .intro-text {
+      font-size: 1.1rem;
+      padding-left: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    .hospital-tagline {
+      font-size: 1.2rem;
+      padding: 1rem;
+    }
+  }
+
+  .mission-vision-cards .card {
+    padding: 2rem 1.5rem;
+  }
+}

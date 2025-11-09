@@ -1,0 +1,25 @@
+<section class="doctors-page">
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title animate-fade-up">Our Doctors</h1>
+      <div class="hero-divider animate-fade-up"></div>
+      <p class="hero-subtitle animate-fade-up">Expert Care, Compassionate Hearts</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="doctors-grid">
+      <div class="doctor-card animate-fade-up" *ngFor="let doctor of doctors">
+        <div class="doctor-photo">
+          <!-- <img [src]="doctor.photo" alt="{{doctor.name}}"> -->
+        </div>
+        <div class="doctor-info">
+          <h3>{{doctor.name}}</h3>
+          <p class="designation">{{doctor.designation}}</p>
+          <p class="specialty">{{doctor.specialty}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

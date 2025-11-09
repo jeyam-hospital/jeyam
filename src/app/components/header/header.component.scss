@@ -1,0 +1,217 @@
+.header {
+  background: #ffffff;
+  box-shadow: 0 2px 20px rgba(136, 14, 14, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid #880e0e;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0rem;
+    // max-width: 1200px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      padding: 1rem;
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(136, 14, 14, 0.2);
+      border: 3px solid rgba(136, 14, 14, 0.2);
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: #880e0e;
+        box-shadow: 0 6px 20px rgba(136, 14, 14, 0.3);
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      display: none;
+      gap: 0;
+
+      &.mobile-open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        padding: 1rem;
+        box-shadow: 0 10px 30px rgba(136, 14, 14, 0.2);
+        border-top: 1px solid #880e0e;
+        border-bottom: 2px solid #880e0e;
+
+        a {
+          width: 100%;
+          text-align: center;
+          padding: 1rem;
+          border-radius: 10px;
+          margin: 0.2rem 0;
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+      gap: 0.8rem;
+    }
+
+    a {
+      color: #880e0e;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+
+      @media (max-width: 480px) {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+      }
+
+      // Hover effect for regular links
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        transition: left 0.5s ease;
+      }
+
+      &:hover {
+        color: #880e0e;
+        background: rgba(136, 14, 14, 0.08);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(136, 14, 14, 0.15);
+
+        &::before {
+          left: 100%;
+        }
+      }
+
+      // Active state for regular links
+      &.active {
+        color: #ffffff;
+        background: #880e0e;
+        box-shadow: 0 4px 15px rgba(136, 14, 14, 0.3);
+        font-weight: 600;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 30px;
+          height: 3px;
+          background: #880e0e;
+          border-radius: 2px;
+          animation: pulse 2s infinite;
+        }
+
+        &:hover {
+          color: #ffffff;
+          background: #6a0c0c;
+        }
+      }
+
+      // Contact us special style - DIFFERENT COLOR
+    &[href*="script.google.com"] {
+  background: linear-gradient(135deg, #f57c00 0%, #e65100 100%);
+  box-shadow: 0 4px 15px rgba(245, 124, 0, 0.4);
+
+  &:hover {
+    background: linear-gradient(135deg, #e65100 0%, #f57c00 100%);
+    box-shadow: 0 6px 20px rgba(245, 124, 0, 0.6);
+  }
+}
+    }
+  }
+}
+
+// Mobile menu button
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #880e0e;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    color: #6a0c0c;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+// Animations
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateX(-50%) scale(1.1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Header animation on page load
+.header {
+  animation: slideIn 0.6s ease-out;
+}
+
+// Scroll effect
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 30px rgba(136, 14, 14, 0.15);
+  border-bottom: 3px solid #880e0e;
+}

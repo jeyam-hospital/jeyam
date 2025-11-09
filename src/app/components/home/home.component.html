@@ -1,0 +1,43 @@
+<section class="hero sec">
+  <!-- Decorative medical icons -->
+  <div class="medical-decoration plus-1">➕</div>
+  <div class="medical-decoration plus-2">➕</div>
+  <div class="medical-decoration heart">❤️</div>
+
+  <div class="container">
+    <h3 class="title" style="color:#880e0e">Welcome to our Jeyam Hospital</h3>
+    <!-- <p class="subtitle">World-class healthcare for every stage of life</p> -->
+   <p class="subtitle quote">
+  “Inspiring Health, Shining with Hope — guided by Faith, powered by Love.”
+  <span class="floating-heart">❤️</span>
+</p>
+
+<p class="subtitle quote">
+  Providing world-class healthcare for every stage of life.
+  <br>
+  <span class="highlight">Specializing in Fertility, IVF, Obstetrics, Maternity, Gynecology & Orthopaedics.</span>
+</p>
+    <a routerLink="/departments" class="btn">Explore Departments</a>
+
+
+
+
+    <ng-image-slider
+      [images]="imageData"
+      [infinite]="true"
+      [autoSlide]="3"
+  [imageSize]="{width: '100%', height: 'auto'}"
+      #nav>
+    </ng-image-slider>
+
+  <div class="address-block">
+  <h4 class="address-title">📍 Our Location</h4>
+  <p>No.1, Mookan Aasari Lane, Pensioners Street,<br>Palani Road, Dindigul – 624001, Tamil Nadu</p>
+
+  <h4 class="address-title">📞 Contact</h4>
+  <p>Mobile: <a href="tel:+919092177188">90921 77188</a> <br>
+     Phone: 0451-2421608, 2431607</p>
+</div>
+
+  </div>
+</section>

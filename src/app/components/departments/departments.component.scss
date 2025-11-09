@@ -1,0 +1,299 @@
+.departments-page {
+  min-height: 100vh;
+  background: #fff;
+}
+
+// Hero Section
+.hero-section {
+  background: linear-gradient(135deg, #880e0e 0%, #6a0c0c 100%);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .hero-divider {
+    width: 100px;
+    height: 4px;
+    background: #ff6b6b;
+    margin: 1.5rem auto;
+    border-radius: 2px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    font-weight: 300;
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// Container
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+// Departments Section
+.departments-section {
+  padding: 5rem 0;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #880e0e;
+    margin-bottom: 1rem;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// Departments Grid
+.departments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Department Card
+.department-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(136, 14, 14, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #b3babf;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(136, 14, 14, 0.15);
+  }
+
+  .card-header {
+    padding: 2rem 2rem 1rem;
+    text-align: center;
+    background: linear-gradient(135deg, #880e0e 0%, #6a0c0c 100%);
+    color: white;
+
+    .dept-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .dept-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .dept-subtitle {
+      font-size: 1rem;
+      opacity: 0.9;
+      font-weight: 300;
+    }
+  }
+
+  .card-body {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .dept-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .services-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-grow: 1;
+
+      li {
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #666;
+
+        &::before {
+          content: '✓';
+          position: absolute;
+          left: 0;
+          color: #880e0e;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .card-footer {
+    padding: 1.5rem 2rem;
+    background: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+
+    .cta-btn {
+      width: 100%;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #880e0e 0%, #6a0c0c 100%);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(136, 14, 14, 0.3);
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(136, 14, 14, 0.4);
+        background: linear-gradient(135deg, #6a0c0c 0%, #880e0e 100%);
+      }
+
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+// Animations
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.animate-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleIn 0.6s ease forwards;
+
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+// Mobile Responsive
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 4rem 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .departments-section {
+    padding: 3rem 0;
+
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+
+  .departments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .department-card {
+    .card-header {
+      padding: 1.5rem 1.5rem 1rem;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    .card-footer {
+      padding: 1rem 1.5rem;
+    }
+  }
+}
+
+// Additional Brand Color Elements
+.brand-accent {
+  color: #880e0e;
+}
+
+.brand-bg {
+  background: #880e0e;
+}
+
+.brand-border {
+  border-color: #880e0e;
+}
