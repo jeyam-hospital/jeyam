@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "/",
+    "/about",
+    "/appointment",
+    "/contact",
+    "/departments",
+    "/doctors",
+    "/home",
+    "/hospital/home"
+  ]
+}
