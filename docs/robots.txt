@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://jeyam-hospital.github.io/jeyam/sitemap.xml

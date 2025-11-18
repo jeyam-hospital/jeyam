@@ -7,7 +7,8 @@ import { DoctorComponent } from './components/doctor/doctor.component';
 import { AppointmentComponent } from './components/appointment/appointment.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  
+  { path: '', redirectTo:'/home',pathMatch:'full'},
   { path: 'home', component: HomeComponent },
   { path: 'jeyam/home', component: HomeComponent },
 
@@ -19,5 +20,5 @@ export const routes: Routes = [
 
 
 
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '/home' }
 ];

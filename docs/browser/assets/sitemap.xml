@@ -6,4 +6,47 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+
+    <url>
+    <loc>https://jeyam-hospital.github.io/jeyam/home</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+    <url>
+    <loc>https://jeyam-hospital.github.io/jeyam/departments</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+      <url>
+    <loc>https://jeyam-hospital.github.io/jeyam/about</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+      <url>
+    <loc>https://jeyam-hospital.github.io/jeyam/doctors</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+       <url>
+    <loc>https://jeyam-hospital.github.io/jeyam/contact</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+
+    <url>
+    <loc>https://jeyam-hospital.github.io/jeyam/appointment</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
 </urlset>

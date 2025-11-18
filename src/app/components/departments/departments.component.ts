@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
+import { Router, RouterLink, RouterModule } from "@angular/router";
 
 @Component({
   selector: 'app-departments',
   standalone: true,
-  imports: [],
+  imports: [RouterLink,RouterModule],
   templateUrl: './departments.component.html',
   styleUrl: './departments.component.scss'
 })
 export class DepartmentsComponent {
+  constructor(private router:Router){
+
+  }
  ortho = [
     { title: 'Orthopedic Surgeons', description: 'Experts in joint replacement, trauma surgery, and complex reconstructions.' },
     { title: 'Sports Medicine Specialists', description: 'Prevention, diagnosis, and treatment of sports injuries with rehab plans.' },
@@ -34,4 +38,7 @@ export class DepartmentsComponent {
     { title: 'Hysteroscopy Experts', description: 'Diagnosing intrauterine problems like polyps, adhesions, etc.' },
     { title: 'Menopause & Midlife Care', description: 'Hormonal therapy, bone health, and lifestyle counseling.' },
   ];
+  routeAppointment(){
+    this.router.navigate(['/appointment']);
+  }
 }
